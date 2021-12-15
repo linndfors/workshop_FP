@@ -2,7 +2,7 @@ import csv
 
 def create_file(dict_goals):
     '''
-    Create a csv-file whith information about goals on day
+    Create a csv-file with information about goals on day
     '''
     data = []
     header = ['Days', 'Numbers', 'Success', 'Failure']
