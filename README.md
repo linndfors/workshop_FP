@@ -1,3 +1,1 @@
-# workshop_FP
-
-Неймовірна програма для трекінгу цілей на день.
+# Create a goaltracker
