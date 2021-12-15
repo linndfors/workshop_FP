@@ -3,6 +3,8 @@ import csv
 def create_file(dict_goals):
     '''
     Create a csv-file with information about goals on day
+    >>> print(create_file({'Eat': 3}))
+    None
     '''
     data = []
     header = ['Days', 'Numbers', 'Success', 'Failure']
@@ -68,7 +70,6 @@ def set_goals():
             break
     create_file(goals_dict)
     return goals_dict
-
 
 dict_of_goals=set_goals()
 # create_file(dict_of_goals)
