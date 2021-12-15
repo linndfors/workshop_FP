@@ -1,6 +1,9 @@
 import csv
 
 def create_file(dict_goals):
+    '''
+    Create a csv-file with information about goals on day
+    '''
     data = []
     header = ['Days', 'Numbers', 'Success', 'Failure']
     for goal in dict_goals.keys():
@@ -13,6 +16,9 @@ def create_file(dict_goals):
         writer.writerows(data)
 
 def write_in_file(d1, d2):
+    '''
+    Compare how many times you make it and how many you should
+    '''
     for key in d1:
         with open('tracker.csv', 'a') as file:
             content=file.readlines()
@@ -26,6 +32,9 @@ def write_in_file(d1, d2):
                         line[3] = '*'
 
 def get_info(get_file):
+    '''
+    Ask how many times you do your goals today
+    '''
     with open(get_file,'r') as track_file:
         plans=track_file.readlines()
         new_dict_goals={}
@@ -46,6 +55,9 @@ def get_info(get_file):
     return new_dict_goals
 
 def set_goals():
+    '''
+    Ask for goals for today
+    '''
     goals_dict={}
     while True:
         goal=input("Set your goal for today:\n")
@@ -62,5 +74,3 @@ dict_of_goals=set_goals()
 # create_file(dict_of_goals)
 goals_dict=get_info('tracker.csv')
 write_in_file(dict_of_goals,goals_dict)
-
-
